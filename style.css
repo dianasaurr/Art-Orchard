@@ -1,0 +1,292 @@
+html {
+    min-width: 1040px;
+  }
+  
+  body {
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    /* margin: 1em auto 4em auto; */
+    margin: 0 0 0 0;
+    width: 960px;
+    /* color: white; */
+    color: #D1D7E0;
+    overflow: hidden;
+  }
+  
+  #body {
+    position: relative;
+  }
+  
+  h1 {
+    font-size: 64px;
+    font-weight: 600;
+    letter-spacing: -2px;
+    margin: .3em 0 .1em .3em;
+    /* color: #C3073F; */
+    color: #802BB1;
+    z-index: 10;
+    background: transparent;
+    position: relative;
+  }
+
+  #graph {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+
+  .btn {
+    display: flex;
+    font-size: 64px;
+    height: 64px;
+    width: 64px;
+    margin: 15px 20px 0 0;
+    border-radius: 50%;
+    background: #2d283e;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  #infobtn {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  #gamebtn {
+    position: absolute;
+    top: 79px;
+    right:0;
+  }
+
+  #closebtn1 {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  #closebtn2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .btn img {
+    object-fit: contain;
+    height: 70%;
+  }
+
+  #newgamebtn {
+    display: flex;
+    font-size: 32px;
+    color: #FFFFFF;
+    height: 64px;
+    width: fill;
+    margin: 10px 20px 10px 20px;
+    border-radius: 10px;
+    background: #2d283e;
+    z-index: 10;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  #startimg {
+    object-fit: contain;
+    margin: 10px 20px 10px 20px;
+    height: 100px;
+  }
+
+  #endimg {
+    object-fit: contain;
+    margin: 10px 20px 10px 20px;
+    height: 100px;
+  }
+
+  #rarrowimg {
+    width: 70%;
+  }
+
+  .sidebar {
+    height: 100%;
+    width: 300px;
+    position: absolute;
+    z-index: 11;
+    top: 0;
+    right: -300px;
+    background-color: #4e4e4e;
+    overflow-x: hidden;
+    transition: 0.3s;
+    padding: 100px 0px 20px 0px;
+  }
+
+  .sidebar p {
+    display: block;
+    transition: 0.3s;
+    margin: 0 20px 0 20px;
+  }
+
+  .sidebarTitle {
+    font-size: 60px;
+    font-weight: 400;
+    letter-spacing: -2px;
+    height: 64px;
+    width: 64px;
+    margin: .3em 0 .1em .3em;
+    color: #ffffff;
+    z-index: 13;
+    background: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .node {
+    cursor: pointer;
+  }
+  
+  h2 {
+    margin-top: 2em;
+  }
+  
+  h1, h2 {
+    text-rendering: optimizeLegibility;
+  }
+  
+  h2 a {
+    color: #ccc;
+    left: -20px;
+    position: absolute;
+    width: 740px;
+  }
+  
+  footer {
+    font-size: small;
+    margin-top: 8em;
+  }
+  
+  header aside {
+    margin-top: 82px;
+  }
+  
+  header aside,
+  footer aside {
+    color: #636363;
+    text-align: right;
+  }
+  
+  aside {
+    font-size: small;
+    left: 780px;
+    position: absolute;
+    width: 180px;
+  }
+  
+  .attribution {
+    font-size: small;
+    margin-bottom: 2em;
+  }
+  
+  #body > p, li > p {
+    line-height: 1.5em;
+  }
+  
+  #body > p {
+    width: 720px;
+  }
+  
+  #body > blockquote {
+    width: 640px;
+  }
+  
+  li {
+    width: 680px;
+  }
+  
+  a {
+    color: steelblue;
+  }
+  
+  a:not(:hover) {
+    text-decoration: none;
+  }
+  
+  pre, code, textarea {
+    font-family: "Menlo", monospace;
+  }
+  
+  code {
+    line-height: 1em;
+  }
+  
+  textarea {
+    font-size: 100%;
+  }
+  
+  #body > pre {
+    border-left: solid 2px #ccc;
+    padding-left: 18px;
+    margin: 2em 0 2em -20px;
+  }
+  
+  .html .value,
+  .javascript .string,
+  .javascript .regexp {
+    color: #756bb1;
+  }
+  
+  .html .tag,
+  .css .tag,
+  .javascript .keyword {
+    color: #3182bd;
+  }
+  
+  .comment {
+    color: #636363;
+  }
+  
+  .html .doctype,
+  .javascript .number {
+    color: #31a354;
+  }
+  
+  .html .attribute,
+  .css .attribute,
+  .javascript .class,
+  .javascript .special {
+    color: #e6550d;
+  }
+  
+  svg {
+    font: 10px sans-serif;
+  }
+  
+  .axis path, .axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+  }
+  
+  sup, sub {
+    line-height: 0;
+  }
+  
+  q:before,
+  blockquote:before {
+    content: "â";
+  }
+  
+  q:after,
+  blockquote:after {
+    content: "â";
+  }
+  
+  blockquote:before {
+    position: absolute;
+    left: 2em;
+  }
+  
+  blockquote:after {
+    position: absolute;
+  }

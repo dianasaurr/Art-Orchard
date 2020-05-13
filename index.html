@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>Art Orchard</title>
+<style>
+@import url(style.css);
+
+/* fill of the graph frame */
+body {
+    /* background:  #f3efe1;    */
+    background: #1A1A1D;
+    /* background: #2D283E; */
+}
+.background {
+    stroke: gray;
+    stroke-width: 1px;
+    /* fill: #4e4e50;  */
+    fill: #B0AEB8;
+}
+.node {
+  stroke: #fff;
+  stroke-width: 1.5px;
+}
+
+.link {
+  stroke: rgba(153, 153, 153, 0);
+  stroke-opacity: .8;
+}
+
+</style>
+</head>
+    <script>
+        function openSide() {
+            document.getElementById("mySidebar").style.right="0px"
+        }
+        function closeSide() {
+            document.getElementById("mySidebar").style.right="-300px";
+        }
+
+        function openSide2() {
+            document.getElementById("otherSidebar").style.right="0px"
+        }
+        function closeSide2() {
+            document.getElementById("otherSidebar").style.right="-300px";
+        }
+    </script>
+    <body>
+        <h1>Art Orchard</h1>
+
+        <div id="mySidebar" class="sidebar">
+            <div class="sidebarTitle">Info</div>
+            <div class="btn" id="closebtn1" onclick="closeSide()">
+                <img id="rarrowimg" src='imgs/rarrow.png' alt="right arrow"> 
+            </div>
+
+            <p>
+                Click on a purple node to expand
+                <br/>
+                Mouse wheel to zoom
+                <br/>
+                Double click to zoom to fit
+                <br/>
+                Click and drag to pan
+                <br/><br/>
+                Dataset taken from the <a href="https://github.com/metmuseum/openaccess">Metropolitan Museum of Art</a> and <a href="https://old.datahub.io/dataset/rijksmuseum">Rijksmuseum</a>
+                <br/><br/>
+                <a href="https://drive.google.com/file/d/10gD13cpjNv5bspdwsNFlTnHFZtlXeBXi/view?usp=sharing">Similarity algorithm</a> borrowed from Mark Hamilton
+                <br/><br/>
+                See our <a href="https://github.mit.edu/6894-sp20/FP-Art-Orchard/blob/master/README.md">README</a> for more information!
+            </p>
+        </div>
+
+        <div id="otherSidebar" class="sidebar">
+            <div class="sidebarTitle">Game</div>
+            <div class="btn" id="closebtn2" onclick="closeSide2()">
+                <img id="rarrowimg" src='imgs/rarrow.png' alt="right arrow"> 
+            </div>
+
+            <p>
+                Welcome to our ArtRace game!
+                <br/><br/>
+                The goal is to walk through the graph from the starting artwork until you find the goal artwork highlighted in gold. 
+                <br/>
+                We hope you find some interesting connections along the way :)
+                <br/><br/>
+                Click the button below to get a new starting artwork and end goal.
+            </p>
+            <div id="newgamebtn" onclick="newGame()">
+                New Game
+            </div>
+            <p>
+                Start:
+            </p>
+            <img id="startimg">
+            <p>
+                End:
+            </p>
+            <img id="endimg">
+        </div>
+
+
+        <div class="btn" id="infobtn" onclick="openSide()">
+            <img id="qmarkimg" src='imgs/qmark.png' alt="question mark">
+        </div>
+
+        <div class="btn" id="gamebtn" onclick="openSide2()">
+            <img id="gameimg" src='imgs/game.png' alt="game">
+        </div>
+        <script src="https://d3js.org/d3.v3.min.js"></script>
+        <script src="https://marvl.infotech.monash.edu/webcola/cola.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        
+        <div id="graph"></div>
+        
+        <script src="arts.js">
+            
+        </script>
+
+        
+
+            <!-- <button id="fullScreenButton">Full screen</button> -->
+            <!-- <button id="zoomToFitButton">Zoom to fit (or double click)</button>
+        Mouse wheel zooms, left-mouse-button drag on the background to pan. -->
+    </body>
+</html>

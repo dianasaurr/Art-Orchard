@@ -6,7 +6,7 @@
   "dependencies": {
     "@types/jquery": "^3.3.35",
     "cola": "^0.1.7",
-    "d3": "^5.16.0",
+    "d3": "^7.6.1",
     "fullscreen": "^1.1.1",
     "jquery": "^3.5.0",
     "webcola": "^3.4.0"
